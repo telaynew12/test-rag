@@ -1,0 +1,125 @@
+[2025-09-05T12:11:20.805+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: file_upload_trigger.consume_kafka_and_run_pipeline __airflow_temporary_run_2025-08-26T13:12:01.320745+00:00__ [queued]>
+[2025-09-05T12:11:20.819+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: file_upload_trigger.consume_kafka_and_run_pipeline __airflow_temporary_run_2025-08-26T13:12:01.320745+00:00__ [queued]>
+[2025-09-05T12:11:20.819+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 1
+[2025-09-05T12:11:20.843+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): consume_kafka_and_run_pipeline> on 2025-08-26 00:00:00+00:00
+[2025-09-05T12:11:20.849+0000] {standard_task_runner.py:57} INFO - Started process 268 to run task
+[2025-09-05T12:11:20.855+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'file_upload_trigger', 'consume_kafka_and_run_pipeline', '__***_temporary_run_2025-08-26T13:12:01.320745+00:00__', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/file_upload_trigger.py', '--cfg-path', '/tmp/tmp6a632ofz']
+[2025-09-05T12:11:20.860+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask consume_kafka_and_run_pipeline
+[2025-09-05T12:11:20.972+0000] {task_command.py:416} INFO - Running <TaskInstance: file_upload_trigger.consume_kafka_and_run_pipeline __airflow_temporary_run_2025-08-26T13:12:01.320745+00:00__ [running]> on host 353891d48c75
+[2025-09-05T12:11:21.129+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='file_upload_trigger' AIRFLOW_CTX_TASK_ID='consume_kafka_and_run_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-08-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='__***_temporary_run_2025-08-26T13:12:01.320745+00:00__'
+[2025-09-05T12:11:21.133+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:11:21.144+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2025-09-05T12:11:21.146+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-09-05T12:11:21.149+0000] {consumer.py:120} WARNING - group_id is None: disabling auto-commit.
+[2025-09-05T12:11:21.150+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('file_uploads',)
+[2025-09-05T12:11:21.172+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('file_uploads', 0)]
+[2025-09-05T12:11:21.175+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:11:21.176+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-09-05T12:11:21.178+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2025-09-05T12:11:21.200+0000] {fetcher.py:418} INFO - Resetting offset for partition ('file_uploads', 0) to offset 1.
+[2025-09-05T12:39:58.244+0000] {cluster.py:316} ERROR - Topic file_uploads not found in cluster metadata
+[2025-09-05T12:39:58.245+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-09-05T12:44:58.329+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('file_uploads', 0)]
+[2025-09-05T12:44:58.333+0000] {fetcher.py:418} INFO - Resetting offset for partition ('file_uploads', 0) to offset 0.
+[2025-09-05T12:58:10.863+0000] {conn.py:1163} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: socket disconnected
+[2025-09-05T12:58:10.866+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+[2025-09-05T12:58:10.869+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:10.871+0000] {fetcher.py:786} ERROR - Fetch to node 1002 failed: KafkaConnectionError: socket disconnected
+[2025-09-05T12:58:10.875+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:58:10.876+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:10.878+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:10.881+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:10.981+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:58:10.982+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:10.982+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:10.983+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:11.180+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:58:11.181+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:11.182+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:11.183+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:11.523+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:58:11.524+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:11.525+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:11.526+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:12.340+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:58:12.341+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:12.342+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:12.342+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:13.790+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-09-05T12:58:13.791+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:13.791+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:13.792+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:16.731+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T12:58:16.732+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T12:58:16.733+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T12:58:16.734+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T12:58:23.182+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T12:58:23.183+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-09-05T13:04:25.796+0000] {conn.py:1163} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: socket disconnected
+[2025-09-05T13:04:25.800+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+[2025-09-05T13:04:25.801+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:25.804+0000] {fetcher.py:786} ERROR - Fetch to node 1002 failed: KafkaConnectionError: socket disconnected
+[2025-09-05T13:04:25.814+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:25.818+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:25.818+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:25.820+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:25.918+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:25.919+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:25.920+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:25.920+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:26.137+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:26.137+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:26.138+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:26.138+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:26.536+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:26.537+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:26.537+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:26.538+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:27.183+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:27.183+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:27.184+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:27.184+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:28.701+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:28.701+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:28.702+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:28.703+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:32.282+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:04:32.284+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:04:32.284+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:04:32.285+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:37.810+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-09-05T13:04:37.811+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-09-05T13:04:37.813+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-09-05T13:04:37.818+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:04:50.175+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:04:50.175+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:04:50.176+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:04:50.176+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:05:18.613+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:05:18.614+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:05:18.615+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:05:18.617+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:05:43.908+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:05:43.909+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:05:43.909+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:05:43.910+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:06:15.015+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:06:15.016+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:06:15.016+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:06:15.017+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:06:42.392+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:06:42.393+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:06:42.393+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:06:42.394+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:07:07.620+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:07:07.621+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:07:07.622+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:07:07.622+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:07:39.756+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:07:39.757+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:07:39.757+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:07:39.758+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata
+[2025-09-05T13:08:08.547+0000] {conn.py:1516} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-09-05T13:08:08.548+0000] {conn.py:323} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-09-05T13:08:08.548+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1002 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-09-05T13:08:08.549+0000] {client_async.py:388} WARNING - Node 1002 connection failed -- refreshing metadata

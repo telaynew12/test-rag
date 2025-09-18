@@ -1,0 +1,142 @@
+﻿OKR
+1. Introduction
+The OKR (Objectives and Key Results) module is designed to align organizational goals with measurable outcomes at all levels of the company. It empowers the first user in the hierarchy (e.g., CEO) to set company-wide objectives and ensures seamless alignment of individual objectives with higher-level goals. The system supports diverse key result metrics such as milestones, achieved/not achieved, currency, numeric values, and percentages, enabling accurate tracking of progress.
+OKR-2024122708450294.pdf
+
+
+2. Functional Requirements
+2.1 Description
+The OKR (Objectives and Key Results) module enables system Users:
+* To create objectives that are Specific, Measurable, Achievable, Relevant, and Time-bound (SMART).
+* To track progress toward key results, using metrics such as milestone, currency, numeric values, and percentage.
+* To facilitates alignment by ensuring that objectives and key results at every level are linked to the organization's overall strategy and goals.
+
+2.2 Requirements (Prioritized using MOSCOW)
+Must-Have 
+* The first user in the hierarchy of the company (e.g., CEO) must be able to create company objectives that are not aligned with any higher-level objectives, as there is no upper position.
+* The first user must be able to create key results for each objective.
+* Each key result's weight must be included by the user, and the summation must equal 100%. All key results would have the same weight if the user submitted without including a weight.
+* Users in any level must be able to select the key result metrics (Milestone, Achieved/Not, Currency, Numeric, Percentage) for their key results.
+* Users in any level must be able to define their milestones if the key result metrics is milestone.
+* Users in any level must be able to define initial and target values if the key result metrics is Currency, Numeric, or Percentage. The default initial value must always be 0 if not defined by the user.
+* Users with the exception of the first user in the hierarchy must have to create their own objective. Their objective is their direct manager's key result, ensuring alignment across the hierarchy.
+* The key results created by any user with subordinates must have be distributed among the team, ensuring balanced responsibility and preventing any single subordinate from being responsible for all of their manager's key results.
+* The system must have automatically progress the key result when it is achieved according to the key result metrics.
+* Whenever a key result progresses for a user at any level, it must have impact their objective and all objectives above theirs, following the alignment rule.
+* The system must have provide real-time visibility into the progress of all objectives and key results for users at any level of the hierarchy.
+Should-Have 
+* 
+o The system should be able to track the progress of key results and OKR progress by using the following metrics:
+* Milestone
+* Currency
+* Numeric Value
+* Achieved/Not Achieved 
+* Percentage
+* 
+o The system should provide notifications or reminders to users when their objectives or key results are due or nearing completion.
+Could-Have 
+* The system could have allow for the export of key result and objective progress reports in PDF or Excel formats.
+* The system could have provide predictive analytics to suggest objectives or milestones based on past performance data.
+Won't-Have 
+* The system won't have Integration with third-party task management tools to synchronize key results and objectives.
+* The system won't have Advanced AI-driven recommendations for optimizing key result weights or suggesting objectives for users.
+
+2.3 Preconditions
+* Users must have authenticated access to the system.
+* Organizational hierarchy (e.g., reporting relationships) must be defined in the system to ensure proper alignment of objectives and key results.
+* Key result metric options (Milestone, Achieved/Not, Currency, Numeric, Percentage) must be pre-configured in the system for users to select.
+* The first user in the hierarchy (e.g., CEO) must initialize the company's top-level objectives.
+
+2.4 Postconditions
+* Objectives and key results are successfully created, saved, and aligned with the hierarchy.
+* Weights for key results are correctly assigned and validated.
+* Progress updates cascade to higher-level objectives, maintaining alignment.
+* Real-time updates of OKR progress are visible in the system.
+* Users can view detailed progress metrics and alignment status.
+* The system maintains data integrity, ensuring no duplicate or misaligned objectives and key results.
+
+2.5 Use Cases/Scenarios
+* Create Company Objectives: The first user creates company-level objectives that are not aligned with any higher-level objectives.
+* Create Key result: Users create key results for their objectives with weights summing to 100%.
+* Assign key result metrics: Users assign specific metrics to each key result.
+* Align objectives with direct manager's KR: Users create objectives aligned with their direct manager's key results.
+* Track Key Result Progress: The system tracks the progress of key results based on their metrics.
+* View OKR Progress: Users view the progress of their OKRs using various metrics.
+
+2.6 Use Case Diagram 
+
+2.7 Flowchart
+
+2.8 User Stories
+* As the first user in the hierarchy (e.g., CEO), I want to create company objectives without aligning them to any higher-level objectives, so that I can set the organization's strategic goals.
+* As a user, I want to create key results for my objectives, so that I can measure progress toward achieving them.
+* As a user, I want to assign weights to my key results, so that I can prioritize them appropriately.
+* As a user, I want the system to assign equal weights to all key results if I do not specify weights, so that I can simplify the process when needed.
+* As a user, I want to choose key result metrics (Milestone, Achieved/Not, Currency, Numeric, Percentage), so that I can track progress accurately.
+* As a user below the first hierarchy level, I want to create objectives aligned with my direct manager's key results, so that I can contribute to higher-level goals.
+* As a user, I want the system to automatically track the progress of my key results based on their metrics, so that I can focus on achieving my goals.
+* As a user, I want to view the progress of my objectives and key results using various metrics, so that I can evaluate my performance.
+
+2.9 Inputs and Outputs
+Inputs:
+* Objective Details: Title, description, and owner of the objective.
+* Key Result Details: Title, description, weight, and selected metric (Milestone, Achieved/Not, Currency, Numeric, Percentage).
+* Milestone stages or initial and target values (if applicable).
+Outputs:
+* Objective Overview: List of objectives with progress metrics and details.
+* Key Result Metrics: Progress values for each key result, calculated and displayed based on metrics.
+* Aligned Objectives: Cascading progress updates across hierarchy levels.
+* Reports and Dashboards: Visual representation of OKR progress, including metrics like percentage completion, milestones achieved, or financial targets met.
+
+
+2.10 Error Handling and Validation
+* Ensure key result weights sum to 100%.
+* Ensure initial and target values are valid numbers (positive for Currency and Numeric metrics).
+* Prevent duplicate objectives or key results under the same owner.
+* Ensure progress updates do not exceed defined target values.
+* Key result weights must sum to 100%.
+* Duplicate objective names are not allowed.
+* Progress cannot exceed the defined target value.
+* Default weights assigned equally if not provided by the user.
+
+
+3. Non-Functional Requirements
+* Performance: System must handle updates and progress tracking for at least 10,000 objectives and key results concurrently without latency exceeding 2 seconds.
+* Scalability: Support multi-tenant architecture for organizations of varying sizes.
+* Usability: Intuitive and user-friendly interface for defining objectives, key results, and metrics and Mobile-responsive design for progress tracking on-the-go.
+* Security: Role-based access control to restrict operations like objective creation and key result updates.
+* Availability: System uptime of 99.9% to ensure reliable access.
+
+
+4. Testing Requirements
+4.1 Acceptance Criteria
+* Users must be able to create objectives and define key results with appropriate metrics.
+* The system must validate key result weights to ensure they sum to 100%, or automatically distribute equal weights if not specified.
+* Users at any level must be able to select key result metrics from Milestone, Achieved/Not Achieved, Currency, Numeric, or Percentage.
+* Users at any level must be able to define milestones if the selected key result metric is Milestone.
+* Users must define initial and target values for Currency, Numeric, or Percentage metrics, with a default initial value of 0 if not provided.
+* Users (except the first user) must create objectives aligned with their direct manager's key results.
+* Progress updates for key results must cascade accurately to higher-level objectives, maintaining alignment.
+* The system must distribute key results created by users with subordinates among the team to ensure balanced responsibility.
+* Reports must display accurate, real-time OKR progress metrics for all users.
+* The system must automatically update progress for key results based on achieved metrics.
+* The system must provide clear and actionable error messages to guide users in resolving invalid inputs effectively.
+* The system must provide real-time visibility into the progress of all objectives and key results for users at any level of the hierarchy. 
+
+4.2 Test Scenarios
+* Verify that users can create objectives with a title, description, and timeline.
+* Verify that users can define key results with appropriate metrics for each objective.
+* Verify that the system validates the total weight of key results to ensure it equals 100%.
+* Verify that the system automatically distributes equal weights among key results if not explicitly defined.
+* Verify that users can select key result metrics, including Milestone, Achieved/Not Achieved, Currency, Numeric, or Percentage.
+* Verify that users can define milestones when the selected metric for a key result is Milestone.
+* Verify that users can define initial and target values for Currency, Numeric, or Percentage metrics. 
+* Verify that the system sets the default initial value to 0 if not provided by the user.
+* Verify that users (except the first user) can only create objectives aligned with their direct manager's key results.
+* Verify that progress updates for key results correctly cascade to higher-level objectives, maintaining alignment rules.
+* Verify that key results created by users with subordinates are distributed among team members to ensure balanced responsibility.
+* Verify that reports display accurate, real-time progress metrics for objectives and key results.
+* Verify that the system automatically updates progress for key results when the defined metrics are achieved.
+* Verify that the system displays clear and actionable error messages when users input invalid data.
+* Verify that users can view the real-time progress of all objectives and key results within their access level.
+

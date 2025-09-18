@@ -1,0 +1,193 @@
+OKR
+Objective key result Alignment
+
+Key Result Metrics
+1. Achieved/Not Achieved
+This binary metric tracks whether a key result or objective has been fully accomplished or not. It is
+useful for clear-cut goals where partial progress is not as relevant.
+Example: Objective: Obtain 2 International certifications by the end of the year.
+
+• Key Result 1: Achieve ISO 9001 certification.
+• Key Result 2: Achieve occupational safety and health certification.
+
+Progress is either 0% or 100%, depending on whether the objective has been achieved.
+If one certification is achieved:
+
+• Key Result Progress = 100% If certification is achieved:
+• Key Result Progress = 0% If not achieved
+
+Then OKR Score = (0% + 100% / 2) = 50%
+
+Although the key results in this example are all the same they might have different weights, you
+can review milestone metrics to find key results that have different weights.
+
+
+2. Milestone
+Milestones can be weighted differently based on their importance or difficulty. Each milestone
+contributes a specific percentage to the total progress.
+Example: Objective: Launch PEP by the end of FY2017Q1.
+Key Result 1: Finalize PEP Design(Weight 40). 80% progressed
+
+• Milestone 1: Finalize Requirements (Weight: 30%). Done
+• Milestone 2: Finalize Product Design (Weight: 50%). Done
+• Milestone 2: Finalize Design Testing (Weight: 20%). Not Yet
+Key Result 2: Finalize PEP Implementation (Weight 35). 75% progressed
+
+• Milestone 1: Finalize Frontend Implementation (Weight: 25%). Done
+• Milestone 2: Finalize Backend (Weight: 25%). Done
+• Milestone 3: Finalize Integration (Weight: 25%). Done
+• Milestone 4: Finalize Services Communication (Weight: 25%). Not Yet
+Key Result 3: Finalize PEP Deployment and Launch (Weight 25) 40% progressed
+
+• Milestone 1: Finalize PEP Deployment (Weight: 40%). Done
+• Milestone 2: Conduct beta testing (Weight: 40%). Not Yet
+• Milestone 4: Launch the product (Weight: 25%). Not Yet
+Progress is calculated by summing the weights of the completed milestones.
+
+• Key Result 1 Progress = 30% (Milestone 1) + 50% (Milestone 2) = 80% 32 26.25
+• Key Result 2 Progress = 25% + 25% + 25% = 75%
+• Key Result 3 Progress = 30% + 50% = 80%
+
+Objective: Launch PEP by the end of FY2017Q1 score is
+
+(KR1 Progress×KR1 Weight)+(KR2 Progress×KR2 Weight)+(KR3 Progress×KR3 Weight)
+KR1 Weight + KR2 Weight + KR3 Weight
+(80%×40)+(75%×35)+(40%×25)​
+40+35+25
+= 68.25%
+
+
+3. Currency
+Currency-based metrics measure financial targets, such as revenue, cost savings, or cash
+collections. This metric helps in tracking monetary objectives from an initial value to a target
+value.
+Example:
+Objective: Increase the company revenue.
+Key Result 1: Increase sales revenue from $200,000 to $500,000 in Q1.
+
+• Initial Revenue: $200,000
+• Target Revenue: $500,000
+• Actual Revenue: $350,000
+
+Key Result 2: Achieve project cash collection of $1,000,000 in Q1.
+
+• Initial Cash Collection: $0
+• Target Cash Collection: $1,000,000
+• Actual Cash Collection: $600,000
+
+Progress is calculated by the amount of revenue or cash collection above the initial value divided
+by the target increase.
+
+• Key Result 1 Progress is
+• ((Actual Award - Initial Award) / (Target Award - Initial Award)) 100%
+• (($350,000 - $200,000) / ($500,000 - $200,000))100%= 50%
+• Key Result 2 Progress is
+• ((Actual Cash Collection - Initial Cash Collection) / (Target Cash Collection - Initial Cash
+Collection)) 100%
+
+• (($600,000 - 0) / ($1,000,000 - $0)) 100%= 60%
+
+OKR Score of Increase the company revenue objective is
+50%+60%/2 = 55%
+Although the key results in this example are all the same they might have different weights, you
+can review milestone metrics to find key results that have different weights.
+
+
+4. Numeri
+
+Numeric metrics measure objectives using specific numbers that are not monetary. This could
+include, number of new clients, number of employees, or website visits.
+Example: Objective: Increase the number of new client acquisitions.
+
+• Key Result: Increase client acquisitions from 20 to 50 in Q1.
+
+Progress is calculated by the number of new clients acquired above the initial value divided by the
+target increase.
+If 35 new clients are acquired in Q2:
+
+• Initial Clients = 20
+• Target Clients = 50
+• Actual Clients = 35
+• Progress = ((35 - 20) / (50 - 20)) 100% = (15 / 30) 100% = 50%
+
+Although the key results in this example are all the same they might have different weights, you
+can review milestone metrics to find key results that have different weights.
+
+
+5. Percentage
+Percentage metrics measure progress or completion of an objective in percentage terms. It is
+often used for ongoing tasks or goals where incremental progress is measurable.
+Example: Objective: Improve customer satisfaction.
+
+• Key Result: Increase customer satisfaction score from 75% to 90%.
+
+Progress is calculated by the increase achieved above the initial value divided by the target
+increase.
+If customer satisfaction improves to 85%:
+
+• Initial Satisfaction = 75%
+• Target Satisfaction = 90%
+• Actual Satisfaction = 85%
+• Progress = ((85% - 75%) / (90% - 75%)) 100% = (10% / 15%) 100% = 66.67%
+
+Although the key results in this example are all the same they might have different weights, you
+can review milestone metrics to find key results that have different weights.
+
+
+6 KPI (Increase / Decrease)
+This metric tracks the frequency of occurrences or events within a specific period. It is useful for
+measuring efficiency, utilization, or time-based metrics.
+Example: Objective: Improve Customer Support Efficiency by the end of the quarter.
+
+
+• Key Result 1: Increase the number of support tickets resolved per hour from 10 to 15.
+• Initial Value: 10 tickets/hour
+• Target Value: 15 tickets/hour
+• Actual Value: 13 tickets/hour
+• Key Result 2: Decrease the average resolution time per ticket from 4 hours to 2 hours.
+• Initial Value: 4 hours/ticket
+• Target Value: 2 hours/ticket
+• Actual Value: 3 hours/ticket
+• Key Result 3: Increase the number of proactive support calls made per week from 50 to 100.
+• Initial Value: 50 calls/week
+• Target Value: 100 calls/week
+• Actual Value: 80 calls/week
+
+Progress Calculation:
+
+Key Result 1 Progress:
+
+• (Actual Value − Initial Value / Target Value - Initial Value) * 100%
+=(13 -10 / 15 - 10) * 100%
+=60%
+Key Result 2 Progress:
+
+• (Initial Value − Actual Value / Initial Value−Target Value) * 100%
+=(4 -3 / 4 - 2) * 100%
+=50%
+Key Result 3 Progress:
+
+• (Actual Value − Initial Value / Target Value - Initial Value) * 100%
+=(80 -50 / 100 - 50) * 100%
+=50%
+Although the key results in this example are all the same they might have different weights, you
+can review milestone metrics to find key results that have different weights.
+
+Checkout the possibilities of combining KPI metrics with numerical
+metrics.
+
+
+OKR Score Calculation
+Individual OKR Score:
+Individual OKR = (KR1 weight × KR1 progress / 100) + (KR2 weight × KR2 progress / 100)
+
+Each key result (KR) contributes to the overall score based on its assigned weight and progress
+percentage.
+Lead OKR Score:
+The lead’s OKR score is calculated by combining their individual OKR contribution and their team's
+average OKR progress. The formula is:
+Lead OKR = (Individual OKR contribution Weight × Individual OKR progress / 100) + (Team OKR
+contribution Weight × Team average OKR progress / 100)
+
+
+

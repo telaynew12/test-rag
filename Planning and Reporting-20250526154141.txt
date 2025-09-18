@@ -1,0 +1,115 @@
+﻿Planning and Reporting
+1. Introduction
+Planning and Reporting sub-module is designed to facilitate effective planning and reporting of objectives and key results (OKRs) within specified time periods. It empowers users to create, submit, and align plans and reports across daily, weekly, and monthly intervals while ensuring accountability and transparency. The system supports milestone tracking, automatic reprimands for missed submissions, and collaborative features such as commenting, validation, and unlocking of plans by users with appropriate roles.
+
+
+2. Functional Requirements
+2.1 Description
+The Planning and Reporting sub-module enables system Users to:
+* Define and configure planning/reporting periods (daily, weekly, monthly).
+* Enable users to create plans and reports for specified periods.
+* Allow users to create milestones as tasks for tracking progress on key objectives.
+* Permit users to edit plans/reports until they are approved by their direct managers.
+* Provide managers the ability to validate submitted plans/reports.
+* Specify deadlines for plan/report submission.
+* Set predefined rules for triggering automatic appreciation and reprimands.
+
+2.2 Requirements (Prioritized using MOSCOW)
+Must-Have 
+* The system must enable users with the appropriate roles to define planning/reporting periods, reprimands and other disciplinary actions within the designated settings functionality
+* Users must create plans/reports for the predefined time periods (i.e. daily, weekly, monthly).
+* The system must allow users to create a milestone as a task if the metric is a milestone.
+* The system must allow Plans/reports to be edited until they are approved by direct manager.
+* Users must create and submit their plans/reports for different time periods within specified time frame for submissions.
+* If a user fails to submit their plans/reports within the designated time frame, the system must trigger a reprimand based on predefined rules.
+* The system must automatically issue a reprimand to any user who fails to submit their plan/report.
+* The system must ensure that plans/reports are aligned across different time periods, such that daily plans align with weekly plans, and weekly plans align with monthly plans.
+* Users must have the ability to add subplans(subtask) to different types of plans.
+* User with appropriate role must comment on team members' weekly and daily plans/reports.
+* User with appropriate role must validate team members' daily and weekly plans/reports.
+* User with appropriate role must unlock team members' daily and weekly plans to allow edits.
+* In the report, users must mark each planned task or milestone as either achieved or failed. If a task or milestone is marked as failed, users must provide a reason.
+* Users must select a reason from a predefined list or provide their own reason when reporting failed plans. This applies to unachieved plans in reports.
+
+2.3 Preconditions
+* The planning/reporting periods (daily, weekly, monthly) must be predefined and configured.
+* Submission deadlines and reprimand rules must be set in the system.
+* Users must have valid login credentials and appropriate roles (e.g., employee, manager, administrator)
+2.4 Postconditions
+* The user's plan/report is successfully saved and marked as submitted within the system.
+* Notifications are sent to the relevant manager for validation.
+* Approved plans/reports are locked from further edits.
+* Rejected plans/reports are returned to the user with comments for revision.
+
+2.5 Use Cases/Scenarios
+* Define Planning/Reporting Periods: Users with appropriate roles define the planning/reporting periods (daily, weekly, monthly) and configure settings, including submission deadlines and reprimand rules.
+* Create and Submit Plans/Reports: Users create and submit their plans/reports within the designated time frame for the predefined periods.
+* Automatic Reprimand for Late Submission: The system issues an automatic reprimand to users who fail to submit their plans/reports within the specified time frame.
+* Edit and Delete Plans/Reports Before Approval: Users can edit and delete their plans/reports until they are approved by their direct manager.
+* Validate or Comment on Plans/Reports: Users with appropriate roles validate and comment on team members' plans/reports.
+* Unlock Plans for Edits: Users with appropriate roles unlock team members' plans/reports to allow further edits.
+* Provide Reasons for Failed Plans: Users select a predefined reason or input their own reason for failed tasks/milestones.
+
+2.6 Use Case Diagram 
+
+2.7 Flowchart
+
+2.8 User Stories
+* As an administrator, I want to configure planning/reporting periods (daily, weekly, monthly), So that users have clear timelines to create and submit their plans/reports.
+* As an employee, I want to create and submit plans and reports for predefined time periods, So that I can organize my tasks and align them with team objectives.
+* As a manager, I want to view submitted plans/reports from my team members, So that I can track their progress and provide feedback.
+* As an employee, I want to edit and delete my plans/reports before they are approved, So that I can correct or improve them based on new information.
+* As a manager, I want to validate the daily and weekly plans/reports of my team members, So that I can ensure they are aligned with team objectives and expectations.
+* As a manager, I want to unlock team members' plans/reports, So that they can make corrections or updates as needed.
+* As an employee, I want to mark tasks/milestones as achieved or failed in my reports, So that I can provide an accurate record of my progress.
+* As an employee, I want to select or input a reason for any failed task/milestone, So that I can document challenges or barriers to completion.
+* As a manager, I want to comment on my team members' plans/reports, So that I can provide feedback to help them improve.
+
+2.9 Inputs and Outputs
+Inputs:
+* Planning/Reporting Period Configuration: Time periods (daily, weekly, monthly), Submission deadlines and Reprimand rules.
+* User Plan/Report Submission: Plan details (tasks, milestones, subplans), Reporting data (achieved/failed tasks, reasons for failure) and Time period selection.
+* Manager Inputs: Validation decisions (approve/reject), Comments on plans/reports and Unlocking requests for plans/reports.
+* System Inputs: Predefined reprimand rules.
+Outputs:
+* Submitted Plans/Reports: Plans/reports visible to managers for validation and Progress alignment reports across periods (daily, weekly, monthly).
+* Notifications: Submission deadlines and reminders and Automatic reprimand alerts for late submissions.
+* Reprimand Records: Generated reprimands for late or failed submissions.
+
+2.10 Error Handling and Validation
+* Plan/Report Submission Validation: Ensure all required fields are filled (e.g., task description, time period, milestones) and Validate submission against the deadline.
+* Reason Validation for Failed Tasks: Check that a valid reason (predefined or custom) is provided for failed tasks/milestones.
+* Duplicate Submission Handling: Prevent duplicate plans/reports for the same time period.
+* Role-Based Validation: Ensure only authorized users can validate, comment, or unlock plans/reports.
+* System Downtime Handling: Provide a fallback mechanism for plan/report submissions during downtime, such as retry queues.
+
+
+3. Non-Functional Requirements
+* Performance: The system must process plan/report submissions within 2 seconds.
+* Scalability: Support up to 10,000 users submitting plans/reports simultaneously.
+* Reliability: Ensure 99.9% uptime for the planning and reporting module.
+* Usability: The interface must be intuitive and require no more than three clicks to create or submit a plan/report.
+* Security: Role-based access control to prevent unauthorized actions.
+
+
+4. Testing Requirements
+4.1 Acceptance Criteria
+* Users can create and submit plans/reports for daily, weekly, and monthly periods.
+* The system issues notifications for upcoming deadlines and triggers reprimands for late submissions. 
+* Managers can validate, comment on, and unlock plans/reports as needed.
+* The system enforces alignment of plans/reports across periods.
+* Tasks and milestones can be marked as achieved or failed, with reasons provided for failures.
+* The system handles validation errors appropriately, providing clear feedback to users.
+
+4.2 Test Scenarios
+* Verify that users can create and submit plans/reports for daily, weekly, and monthly periods.
+* Verify that the system issues notifications to users for upcoming deadlines for plan/report submissions.
+* Verify that the system triggers reprimands or alerts for late submissions of plans/reports.
+* Verify that managers can validate submitted plans/reports and provide comments on them.
+* Verify that managers can unlock plans/reports for revisions after validation.
+* Verify that the system enforces alignment of plans and reports across daily, weekly, and monthly periods.
+* Verify that users can mark tasks and milestones as achieved or failed within their plans/reports.
+* Verify that users can provide reasons for failed tasks and milestones.
+* Verify that the system validates user input and provides clear feedback for any validation errors.
+* Verify that the system handles validation errors appropriately without crashing or causing unexpected behavior.
+

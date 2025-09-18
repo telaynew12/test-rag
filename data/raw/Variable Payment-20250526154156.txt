@@ -1,0 +1,121 @@
+﻿Variable Payment
+1. Introduction
+The Variable Payment (VP) sub-module is designed to enhance organizational performance by linking employee compensation to measurable achievements. Also known as performance-based pay, variable payment rewards employees based on their contributions to specific goals, targets, or outcomes. This system motivates employees, strengthens their focus on corporate objectives, reinforces a performance-driven culture, and recognizes individual contributions to the company's success. 
+
+
+2. Functional Requirements
+2.1 Description
+The Variable Payment sub-module enables system Users to:
+* calculates the Variable Pay (VP) Score for each employee based on OKR and KPI metrics.
+* configures the formula for calculating the VP Score, including weightage for OKR and KPI components.
+* view a detailed breakdown of how their VP Score was calculated.
+* modifies the weightage of OKR and KPI metrics in the VP Score calculation to align with organizational changes.
+
+2.2 Requirements (Prioritized using MOSCOW)
+Must-Have
+1. The system should calculate the VP Score based on both OKR (Objectives and Key Results) and KPI (Key Performance Indicators) metrics.
+2. Customizable VP Score formulas and criteria should be available for admin users to allow flexibility.
+3. The system should display the current VP Score in real-time on employee dashboards.
+4. Employees should have access to a detailed breakdown explaining how their VP Score was calculated. 
+5. The system should differentiate VP percentages between managerial and staff roles:
+o Managerial Roles: Higher percentage allocation.
+o Staff Roles: Lower percentage allocation.
+6. The system should automatically calculate the VP Score based on defined criteria.
+Should-Have
+1. Users with appropriate roles should have the ability to adjust the weighting of OKR and KPI components in the VP Score calculation.
+2. VP allocation rules should be configurable to accommodate role changes or updates to corporate policy.
+Could-Have
+1. Provide advanced analytics and visualizations for historical VP Score trends.
+2. Integrate with third-party tools for performance management or payroll systems.
+Won't-Have (for now)
+1. Automated notifications or alerts for significant changes to an employee's VP Score.
+
+2.3 Preconditions
+* Employees must have assigned OKRs and KPIs with measurable metrics and targets.
+* Users must be assigned appropriate roles (e.g., Admin, Employee, Manager) to access and perform specific actions within the module.
+* The weight for OKR and KPI contributions to the VP Score must be defined by admin users.
+* Rules for allocating VP based on role and performance must be configured in the system.
+* The system must be operational, with users having access to the platform and a stable connection to retrieve real-time data.
+
+2.4 Postconditions
+* The VP Score for each employee is calculated and displayed on their dashboard.
+* Employees can view their updated VP Scores and a detailed breakdown of the calculation.
+* The system applies the configured rules to allocate variable pay based on roles and performance.
+* Sensitive data related to VP calculations and employee performance remains secure and accessible only to authorized users.
+
+2.5 Use Cases/Scenarios
+* Calculate VP Score: The system automatically calculates the Variable Pay (VP) Score for each employee based on OKR and KPI metrics.
+* Customize VP Calculation Formula: Admin configures the formula for calculating the VP Score, including weightage for OKR and KPI components.
+* View VP Score Breakdown: Employees view a detailed breakdown of how their VP Score was calculated.
+* Configure Role-Based VP Allocation: Admin configures the percentage allocation of variable pay for managerial and staff roles.
+* Adjust OKR and KPI Weighting: Admin modifies the weightage of OKR and KPI metrics in the VP Score calculation to align with organizational changes.
+* Configure VP Allocation Rules: Admin defines rules for VP allocation to reflect changes in roles, policies, or corporate objectives.
+
+2.6 Use Case Diagram 
+
+2.7 Flowchart
+
+2.8 User Stories
+* As an Admin, I want the system to automatically calculate the VP Score for each employee based on OKR and KPI metrics, So that employees' variable pay is accurately determined according to their performance.
+* As an Admin, I want to be able to configure the calculation formula for VP scores, including adjusting the weight of OKR and KPI components, So that I can tailor the variable pay structure according to organizational needs.
+* As an Employee, I want to see a detailed breakdown of how my VP Score is calculated, So that I can understand the contribution of my OKR and KPI performance to my variable pay.
+* As an Admin, I want to configure different VP allocation percentages for managerial and staff roles, So that employees in different roles receive appropriate variable pay based on their responsibilities and influence.
+* As an Admin, I want to be able to adjust the weight of OKR and KPI metrics in the VP Score calculation, So that I can reflect changes in company goals or role responsibilities in the calculation of variable pay.
+* As an Admin, I want to configure VP allocation rules to account for role changes or updates to corporate policy, So that the VP distribution aligns with new organizational priorities or structural changes.
+* As an Employee, I want to see my current VP Score updated in real-time on my dashboard, So that I can monitor my progress and performance regularly.
+* As an Employee, I want to view how my VP Score has changed over time, So that I can track my performance and the impact of different contributions on my variable pay.
+
+2.9 Inputs and Outputs
+Inputs:
+* OKR Data: Employee's OKR goals and performance data (e.g., OKR progress).
+* KPI Data: Specific performance metrics tied to the employee's role and responsibilities (e.g., sales numbers, project milestones).
+* Role Information: Employee's job role and responsibilities (used for VP allocation based on role).
+* Weighting Configuration: Weight assigned to OKR and KPI components in the VP Score calculation (modifiable by admin).
+* VP Allocation Rules: Rules defining how VP is allocated to employees based on role, performance, and other criteria.
+* Employee Data: Employee's personal and professional information, including salary, to calculate the final variable pay.
+Outputs:
+* VP Score: Calculated value representing the employee's performance-based pay.
+* VP Breakdown: Detailed explanation showing how the VP Score is derived from OKRs and KPIs.
+* Real-Time VP Score Display: Updated VP Score shown on the employee's dashboard.
+* VP Allocation: Final variable pay amount for the employee after VP Score is calculated.
+
+2.10 Error Handling and Validation
+1. Invalid Data Input: If the system detects incomplete or incorrect data (e.g., missing OKR or KPI values), it should display an appropriate error message prompting the user to correct the input.
+2. Calculation Errors: If a calculation error occurs (e.g., due to missing or conflicting weighting values), the system should log the error and notify the admin to resolve it.
+3. Role Misconfiguration: If an employee's role or VP allocation is not configured properly, an error message should be displayed, requesting the admin to assign correct values.
+4. Insufficient Permissions: If a user without appropriate permissions attempts to modify VP configurations or view sensitive data, an access-denied message should be shown.
+5. Data Validation: All inputs (OKRs, KPIs, weights, roles) should be validated for completeness and correctness before processing. Incomplete or invalid data should be flagged for correction.
+6. Range Validation: Ensure that the VP percentage allocation values are within a defined range (e.g., 0% to 100%).
+7. Permissions Validation: Ensure that only users with appropriate roles (e.g., Admin) can make changes to VP calculations or configurations.
+
+
+3. Non-Functional Requirements
+* Performance: The system should process and calculate VP Scores in real-time, providing users with immediate feedback on their performance without significant delays.
+* Scalability: The system must be able to handle a large number of employees and performance data as the organization grows, ensuring that VP calculations remain accurate and efficient.
+* Availability: The VP sub-module should be available 99.9% of the time, with minimal downtime for maintenance or updates.
+* Usability: The user interface should be intuitive and easy to use for both employees and administrators, with clear navigation and instructions.
+* Security: Sensitive employee performance data and VP scores must be encrypted, and access must be restricted to authorized users only. 
+
+
+4. Testing Requirements
+4.1 Acceptance Criteria
+* The system successfully calculates the VP Score based on the defined OKR and KPI metrics and displays it correctly.
+* The system successfully updates the VP Score in real-time on the employee's dashboard whenever performance data changes.
+* The system successfully displays a detailed breakdown of the VP Score, showing contributions from OKR and KPI metrics.
+* The system successfully applies the correct VP allocation percentage based on the employee's role.
+* The system successfully denies unauthorized users access to modify VP calculation formulas or allocation rules and displays an appropriate message.
+* The system successfully ensures that all sensitive data, including OKRs, KPIs, and VP Scores, is encrypted and accessible only to authorized users.
+
+4.2 Test Scenarios
+* Verify that the system calculates the VP Score accurately based on the defined OKR and KPI metrics.
+* Verify that the calculated VP Score is displayed correctly on the employee's dashboard.
+* Verify that the system updates the VP Score in real-time when performance data related to OKRs or KPIs changes.
+* Verify that the detailed breakdown of the VP Score shows contributions from OKR and KPI metrics.
+* Verify that the system applies the correct VP allocation percentage according to the employee's role or designation.
+* Verify that unauthorized users cannot modify VP calculation formulas or allocation rules, and an appropriate error message is displayed when access is denied.
+* Verify that sensitive data such as OKRs, KPIs, and VP Scores is encrypted both at rest and in transit.
+* Verify that only authorized users can access sensitive data related to VP Scores, OKRs, and KPIs.
+* Verify that the system prevents unauthorized access attempts from causing errors or exposing sensitive information.
+
+
+

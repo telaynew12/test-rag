@@ -1,0 +1,27 @@
+[2025-09-05T13:31:06.194+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: file_upload_trigger.consume_kafka_and_run_pipeline __airflow_temporary_run_2025-08-26T13:12:01.320745+00:00__ [queued]>
+[2025-09-05T13:31:06.213+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: file_upload_trigger.consume_kafka_and_run_pipeline __airflow_temporary_run_2025-08-26T13:12:01.320745+00:00__ [queued]>
+[2025-09-05T13:31:06.214+0000] {taskinstance.py:1361} INFO - Starting attempt 3 of 1
+[2025-09-05T13:31:06.251+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): consume_kafka_and_run_pipeline> on 2025-08-26 00:00:00+00:00
+[2025-09-05T13:31:06.259+0000] {standard_task_runner.py:57} INFO - Started process 215 to run task
+[2025-09-05T13:31:06.269+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'file_upload_trigger', 'consume_kafka_and_run_pipeline', '__***_temporary_run_2025-08-26T13:12:01.320745+00:00__', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/file_upload_trigger.py', '--cfg-path', '/tmp/tmpbby0v67v']
+[2025-09-05T13:31:06.279+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask consume_kafka_and_run_pipeline
+[2025-09-05T13:31:06.480+0000] {task_command.py:416} INFO - Running <TaskInstance: file_upload_trigger.consume_kafka_and_run_pipeline __airflow_temporary_run_2025-08-26T13:12:01.320745+00:00__ [running]> on host 353891d48c75
+[2025-09-05T13:31:06.733+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='file_upload_trigger' AIRFLOW_CTX_TASK_ID='consume_kafka_and_run_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-08-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='__***_temporary_run_2025-08-26T13:12:01.320745+00:00__'
+[2025-09-05T13:31:06.747+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-09-05T13:31:06.762+0000] {conn.py:618} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2025-09-05T13:31:06.763+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-09-05T13:31:06.767+0000] {consumer.py:120} WARNING - group_id is None: disabling auto-commit.
+[2025-09-05T13:31:06.769+0000] {subscription_state.py:181} INFO - Updating subscribed topics to: ('file_uploads',)
+[2025-09-05T13:31:06.774+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('file_uploads', 0)]
+[2025-09-05T13:31:06.777+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-09-05T13:31:06.779+0000] {conn.py:457} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-09-05T13:31:06.781+0000] {conn.py:945} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2025-09-05T13:31:06.814+0000] {fetcher.py:418} INFO - Resetting offset for partition ('file_uploads', 0) to offset 0.
+[2025-09-05T13:31:06.904+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/jj.txt
+[2025-09-05T13:31:07.294+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/jj.txt
+[2025-09-05T13:31:07.643+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/kk.txt
+[2025-09-05T13:31:08.074+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/kk.txt
+[2025-09-05T13:31:08.437+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/ggj.txt
+[2025-09-05T13:31:08.872+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/ggj.txt
+[2025-09-05T14:07:11.695+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/hhhh.txt
+[2025-09-05T14:07:22.695+0000] {logging_mixin.py:151} INFO - New file: ./data/raw/hhhh.txt

@@ -1,0 +1,149 @@
+﻿
+
+
+Table of Contents
+1.	Introduction	1
+2.	CLASSIFICATION OF ROLES	1
+2.1.	Teams	1
+2.2.	Departments	1
+2.3.	Divisions	1
+2.4.	Executives	2
+3.	Planning framework of IE	2
+3.1.	OKR Metrics	3
+3.2.	OKR weight	3flu
+3.3.	OKR Scoring	4
+4.	Overall introduction to planning and reporting	4
+5.1.	Types of planning in IE	4
+5.1.1.	Monthly plan	4
+5.1.2.	Weekly plan	5
+5.1.3.	Daily plan	5
+5.2.        Types of reporting in IE	5
+5.2.1.      Monthly report	5
+5.2.2.      Weekly Report	5
+5.2.3.      Daily report	6
+5.2.3.      Planning and reporting review and approval	6
+
+
+Revision history
+Description
+Author
+Effective date
+01
+Initial release
+Lidya Samuel
+3/17/25
+02
+Created another section labeled "Reporting" and, link of the check-in added and diagram created to show how OKR planning trickles down from the CEO to the officers
+Lidya Samuel
+3/27/25
+
+
+1. Introduction 
+- At IE, strict planning and reporting are cultural standards that make us different from other companies. IE employs a controlled, measurable, consistent and open communication platform that is in line with performance management system that it built to boost the engagement and productivity of employees.
+
+
+2. CLASSIFICATION OF ROLES 
+2.1. Teams 
+Teams are the foundational work units within the company, composed of employees who collaborate on specific projects, tasks, or functions. Each team is led by a Team Lead, who follows up on staff's plan and report, monitors performance, and ensures alignment with company objectives. Teams work closely within their respective divisions to execute operational and strategic priorities.
+2.2. Departments
+Departments are specialized functional units within the company that focus on specific areas such as Sales, Finance, Marketing, etc... Each department is composed of multiple teams that collaborate to achieve departmental objectives and are led by managers. Departments ensure company-wide strategies are effectively implemented within their focus areas, led by managers. 
+2.3. Divisions  
+Divisions are high-level organizational units responsible for overseeing multiple teams and ensuring alignment with strategic goals. Each division is led by a Division Chief or Manager, who ensures that teams within the division collaborate effectively, meet their objectives, and escalate critical issues to the Executive level when necessary. 
+2.4. Executives 
+The Executive level consists of the CEO, Chiefs, and key executives responsible for strategic decision-making and overall company direction. They address high-level concerns escalated from divisions, set company-wide priorities, and ensure that all departments work towards the company's long-term vision and goals.
+
+
+3. Planning framework of IE
+- OKR is a planning framework that stands for "objective and key result".
+- OKRs is a collaborative goal-setting methodology used by teams and individuals to set challenging, ambitious goals with measurable results. In IE, we plan 4 OKRs annually by dividing them into quarters and scoring them by the end of every three month.
+- All division in IE plan their OKR on week 13 of every quarter and after getting approval from their direct manager and the planning and performance management team proceeds to inserting the plan into system.
+
+A. Objective: 
+- It's the general form of our goal and it and shows "WHAT" needs to be accomplished.
+- An individual can only plan 3-6 objectives in an OKR. This is to avoid being over ambitious and failing on certain goals.
+B. Key Result:
+- It is the specific and measurable form of our objective and the paths we walk to achieve the general goal we have and it shows the "HOW" of our overall objective.
+- An individual can only plan 2-6 key results in number for a single objective. This is to make the process of achieving that certain objective more precise.
+3.1. OKR Metrics
+- In IE, we use OKR metrics to be able to measure our key results and ensure they are planned in a specific and measurable standard. Some of our metrics are; 
+
+* Numeric: This metrics indicates key result that is measured by counting.
+* Achieve: indicates key result that is measured by delivery and approval of document and a task that doesn't have milestone.
+* Percentage: indicates key result that is measured by the set percentage level of increasing a target or decreasing an unsatisfactory event.
+* Currency: indicates key result that is measured by achieving the set value.
+* Milestone: indicates key results that have major sub tasks inside them.
+3.2. OKR weight
+- OKR weight is used to differentiate the value of our targets and give higher weight to key results that have high impact on the company goals and objectives. In addition, the total amount of key result in one objective must be 100 in total.
+3.3. OKR Scoring
+- When we approach the end of an OKR cycle, which is on the week 13 (Friday) of every quarter we've reached the perfect time for scoring OKRs. Scoring OKRs provides an opportunity for you and your team to reflect on accomplishments and evaluate what should be done differently during the next cycle. 
+OKR Achievement scale in IE;
+- Score 75 and above - Good performance appreciation letter
+- Score between 60 and 75 - Average performance reminder letter
+- Score between 60 and 50 - Poor performance warning letter
+- Score below 50 - Final performance warning letter
+
+
+4. Overall introduction to planning and reporting
+- All plans and report are reviewed and followed up by the planning and performance management team on a daily. The team responds to a check in "Who didn't close any one of his/her subordinates' daily check-in before 6:30AM or weekly check-in on Saturday before 10:00PM? Who has not properly planned their Weekly, Daily plans" to ensure the planning process is consistently being enforced by all employees. 
+- There are four planning types in IE and every employees are expected to plan their targets as per their position and hierarchy. 
+
+  
+5. Planning and reporting structure and timeline
+5.1. Types of planning in IE
+5.1.1. Monthly plan
+- The monthly plan is planned by chiefs and managers that do not have chief in a division. 
+- The standard time of planning the monthly plan is by the first day of the new month and the standard time of reporting a monthly plan is by the last day of the month.
+- The overall weight of a monthly plan must be 100% in total and each weight is given to show the value of each target. 
+5.1.2. Weekly plan 
+- The weekly plan is planned by managers, team leaders and all employees.
+- The standard time to finalize submit the weekly plan and report is from Friday 5:31 PM- 2:00 PM Saturday for all officers. In addition the standard time to submit the weekly plan for all management staff is from Friday 5:31 PM- Saturday 6:00 PM. 
+- The overall weight of a weekly plan must be 100% in total and each weight is given to show the value of each target. In addition the standard weight amount that can be given for a certain task is greater than 5% and not more than 15% on a weekly plan.
+5.1.3. Daily plan 
+- The daily plan is planned by all non-management staff employees.
+- The standard time to plan a daily plan and submit a report is every day 5:31 PM- 9:59 PM in the evening. 
+- The overall weight of a weekly plan must be 100% in total and each weight is given to show the value of each target. 
+5.2. Types of reporting in IE
+5.2.1. Monthly report
+- The monthly report is reports by chiefs and managers that do not have chief in a division. 
+- The standard time of reporting a monthly plan is by the last day of the month and the overall weight of a monthly report shows the score of individuals from total of 100% of their plan. 
+5.2.2. Weekly Report 
+- The weekly report is reported by managers, team leaders and all employees in the company.
+- The standard time to finalize submit the weekly report is from Friday 5:31 PM- 2:00 PM Saturday for all officers. In addition the standard time to submit the weekly report for all management staff is from Friday 5:31 PM- Saturday 6:00 PM. 
+- The overall weight of a weekly report shows the progress of an individual out of 100% from the total of their plan.  
+5.2.3. Daily report 
+- The daily report is reported by all non-management staff employees.
+- The standard time to report a daily report is every day 5:31 PM- 9:59 PM in the evening. 
+- The overall weight of a daily report is be 100% shows the progress of an individual out of 100% from the total of their plan.  
+5.2.4. Planning and reporting review and approval
+- After a plan and report is submitted by every subordinate a manager or a leader reviews and gives comment on any missed plan or wrong report if any and closes (approves) it.
+- The standard time to close (approve) a plan and report from a subordinate is until 8:00 AM every morning.
+- The planning and performance team always ensures that plans and report are submitted, reviewed and closed as per as per the standard time on a daily basis by responding to check-ins on our communication platform (Basecamp).
+- Link to Monthly planning and reporting check in
+https://3.basecamp.com/3974505/buckets/7072753/question_answers/8440427009
+- Link to Weekly and daily planning and reporting check in
+
+https://3.basecamp.com/3974505/buckets/7072607/question_answers/8479144333
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Page | 0 
+
+
+                            Planning and reporting guideline
+IE-PP-F-062
+
+
+8 | Page
+
+
