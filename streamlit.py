@@ -1,24 +1,90 @@
 import streamlit as st
 import requests
 
-st.title("Test Deployed FastAPI Chat Endpoint")
+# ----------------------------
+# FastAPI backend base URL
+# ----------------------------
+BASE_URL = "http://172.20.30.72"
 
-# Input box for user query
-query = st.text_input("Enter your query:", "Finalize AI MVP")
+st.set_page_config(page_title="AI OKR Assistant", page_icon="🤖")
+st.title("🤖 AI OKR Assistant")
+st.write("Test your OKR AI endpoints: Chat, Weekly Plan, Daily Plan.")
 
-# Number of top results
-top_k = st.number_input("Top K results:", min_value=1, max_value=10, value=3)
+# ----------------------------
+# Choose endpoint
+# ----------------------------
+endpoint = st.selectbox(
+    "Select Endpoint",
+    ["Chat (Key Results)", "Weekly Plan", "Daily Plan"]
+)
 
-if st.button("Send Request"):
-    url = "http://139.185.33.139/chat"  # Your public endpoint
-    payload = {"query": query, "top_k": top_k}
+top_k = st.number_input("Top K", min_value=1, max_value=20, value=5)
 
-    try:
-        response = requests.post(url, json=payload)
-        if response.status_code == 200:
-            st.success("Request successful!")
-            st.json(response.json())
+# ----------------------------
+# Chat Endpoint
+# ----------------------------
+if endpoint == "Chat (Key Results)":
+    query = st.text_input("Enter Objective:", "")
+    if st.button("Generate Key Results"):
+        if query.strip():
+            try:
+                response = requests.post(
+                    f"{BASE_URL}/chat",
+                    json={"query": query, "top_k": top_k},
+                    headers={"Content-Type": "application/json"}
+                )
+                if response.status_code == 200:
+                    st.success("✅ Key Results Generated!")
+                    st.json(response.json())
+                else:
+                    st.error(f"❌ Error {response.status_code}: {response.text}")
+            except Exception as e:
+                st.error(f"⚠️ Request failed: {e}")
         else:
-            st.error(f"Error {response.status_code}: {response.text}")
-    except Exception as e:
-        st.error(f"Request failed: {e}")
+            st.warning("⚠️ Please enter an Objective first.")
+
+# ----------------------------
+# Weekly Plan Endpoint
+# ----------------------------
+elif endpoint == "Weekly Plan":
+    key_result = st.text_input("Enter Key Result:", "")
+    if st.button("Generate Weekly Plan"):
+        if key_result.strip():
+            try:
+                response = requests.post(
+                    f"{BASE_URL}/weekly-plan",
+                    json={"key_result": key_result, "top_k": top_k},
+                    headers={"Content-Type": "application/json"}
+                )
+                if response.status_code == 200:
+                    st.success("✅ Weekly Plan Generated!")
+                    st.json(response.json())
+                else:
+                    st.error(f"❌ Error {response.status_code}: {response.text}")
+            except Exception as e:
+                st.error(f"⚠️ Request failed: {e}")
+        else:
+            st.warning("⚠️ Please enter a Key Result first.")
+
+# ----------------------------
+# Daily Plan Endpoint
+# ----------------------------
+elif endpoint == "Daily Plan":
+    annual_key_result = st.text_input("Enter Annual Key Result:", "")
+    if st.button("Generate Daily Plan"):
+        if annual_key_result.strip():
+            try:
+                response = requests.post(
+                    f"{BASE_URL}/daily-plan",
+                    json={"annual_key_result": annual_key_result, "top_k": top_k},
+                    headers={"Content-Type": "application/json"}
+                )
+                if response.status_code == 200:
+                    st.success("✅ Daily Plan Generated!")
+                    st.json(response.json())
+                else:
+                    st.error(f"❌ Error {response.status_code}: {response.text}")
+            except Exception as e:
+                st.error(f"⚠️ Request failed: {e}")
+        else:
+            st.warning("⚠️ Please enter an Annual Key Result first.")
