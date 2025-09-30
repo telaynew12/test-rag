@@ -4,7 +4,7 @@ import requests
 # ----------------------------
 # FastAPI backend base URL
 # ----------------------------
-BASE_URL = "http://172.20.30.72"
+BASE_URL = "https://selamnew-ai.ienetworks.co/"
 
 st.set_page_config(page_title="AI OKR Assistant", page_icon="🤖")
 st.title("🤖 AI OKR Assistant")
